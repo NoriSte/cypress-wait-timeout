@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Cypress plugin</title>
+  </head>
+  <body>
+    <div>
+      <h3>Cypress Wait Until plugin</h3>
+      Issue: "Cant set timeout option"
+      <a href="https://github.com/NoriSte/cypress-wait-until/issues/139" target="_blank">#139</a>
+    </div>
+    <div id="root">Original text</div>
+
+    <script>
+      window.mutateAfterDelay = (delay) => {
+        setTimeout(() => {
+          document.getElementById('root').innerHTML = 'New text'
+        }, delay)
+      }
+    </script>
+  </body>
+</html>
